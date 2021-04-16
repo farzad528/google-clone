@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Avatar from "../components/Avatar";
-import ProfilePic from "../components/ProfilePic";
 
 export default function Home() {
   return (
@@ -19,9 +18,7 @@ export default function Home() {
         <div className="flex space-x-4 items-center">
           <p className="link">Gmail</p>
           <p className="link">Images</p>
-
-          <ProfilePic url="https://coaching.papareact.com/ai9" />
-
+          <Avatar url="https://pbs.twimg.com/profile_images/1357719928854478848/6Mh3HOpn_400x400.jpg" />
         </div>
       </header>
       {/*  Body */}
