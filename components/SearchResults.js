@@ -5,6 +5,21 @@ function SearchResults({ results }) {
         About {results.searchInformation?.formattedTotalResults} results ({" "}
         {results.searchInformation?.formattedSearchTime} seconds)
       </p>
+
+      {results.items?.map((result) => (
+        <div key={result.link} className="max-w-xl mb-8">
+          <div className="group">
+            <a href={result.link} className="text-sml">
+              {" "}
+              {result.formattedUrl}
+            </a>
+            <a href={result.link} className="text-sml">
+              <h2 className="truncate text-xl text-blue-800 font-medium group-hover:underline">{result.title}</h2>
+            </a>
+          </div>
+          <p>{result.snippet}</p>
+        </div>
+      ))}
     </div>
   );
 }
