@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import Avatar from "./Avatar";
+import HeaderOptions from "./HeaderOptions";
 
 function Header() {
   const router = useRouter();
@@ -45,6 +46,8 @@ function Header() {
         </form>
         <Avatar className="ml-auto" url="https://pbs.twimg.com/profile_images/1357719928854478848/6Mh3HOpn_400x400.jpg" />
       </div>
+
+      <HeaderOptions />
     </header>
   );
 }
