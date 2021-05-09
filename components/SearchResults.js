@@ -14,12 +14,16 @@ function SearchResults({ results }) {
               {result.formattedUrl}
             </a>
             <a href={result.link} className="text-sml">
-              <h2 className="truncate text-xl text-blue-800 font-medium group-hover:underline">{result.title}</h2>
+              <h2 className="truncate text-xl text-blue-800 font-medium group-hover:underline">
+                {result.title}
+              </h2>
             </a>
           </div>
-          <p>{result.snippet}</p>
+          <p className="line-clamp-2">{result.snippet}</p>
         </div>
       ))}
+
+      <PaginationButtons />
     </div>
   );
 }
